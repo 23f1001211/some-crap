@@ -1,0 +1,10 @@
+on:
+  workflow_dispatch: {}
+
+jobs:
+  this:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 23f1001211@ds.study.iitm.ac.in
+        run: echo hi
+        shell: bash
