@@ -10,7 +10,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ./
-          key:  cache-2314628
+          key: cache-2314628
       - name: prime-cache-2314628
         run: |
           echo ${{ steps.cache.outputs.cache-hit }}
