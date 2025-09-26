@@ -1,1 +1,1 @@
-{"name": "ga2-52caf6", "image":"mcr.microsoft.com/devcontainers/universal:2", "customizations": {"vscode": {"extensions": ["astral-sh.uv", "ms-python.python"]}}, "postCreateCommand": "uv pip install fastapi"}
+{"name": "ga2-52caf6", "image":"mcr.microsoft.com/devcontainers/universal:2", "customizations": {"vscode": {"extensions": ["astral-sh.uv", "ms-python.python"]}}, "features": {"ghcr.io/devcontainers/features/python:1": {}}, "postCreateCommand": "uv pip install fastapi"}
