@@ -1,0 +1,27 @@
+on:
+  schedule:
+    # *sigh*
+    - cron: "0 0 * * *"
+  workflow_dispatch: # Allow manual triggers
+
+jobs:
+  scrape-imdb:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: add comment
+        run: |
+          echo "<!-- boo -->" >> README.md
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add README.md
+          git commit -m "hi [skip ci]" || exit 0
+          git push
